@@ -1,0 +1,133 @@
+REST API
+
+localhost/store/rest/V1/integration/admin/token
+
+
+{
+ "username":"USER",
+ "password":"PASS"
+}
+
+Content-Type: application/json
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------
+
+localhost/store/rest/V1/products
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer tjlgo131xm7pfufovcifmktgvo0k3b1x
+
+
+{
+  "product": {
+    "sku": "B201-SKU2",
+    "name": "B2022",
+    "price": 30.00,
+    "status": 1,
+    "type_id": "simple",
+    "attribute_set_id":4,
+    "weight": 1,
+    "extensionAttributes": 
+    {
+      "stockItem": 
+      {
+        "qty": 20
+      }
+    }
+  }
+}
+
+
+{
+  "product": {
+    "sku": "B201-SKU2",
+    "name": "B2022",
+    "price": 30.00,
+    "status": 1,
+    "type_id": "simple",
+    "attribute_set_id":4,
+    "weight": 1
+	"custom_attributes":
+	[
+		{
+			attribute_code": "category_ids",
+			"value":[]
+		},
+		"description": "Heavy Duty Brake Cables",
+        "meta_description": "Some describing text",
+        "image" : "/w/i/sample_1.jpg",
+        "small_image": "/w/i/sample_2.jpg",
+        "thumbnail": "/w/i/sample_3.jpg"
+	]
+  }
+}
+
+'attribute_code' => 'description', 'value' => 'Simple Description'
+'attribute_code' => 'short_description', 'value' => 'Simple  Short Description' 
+
+
+
+
+!!!!!
+
+{
+    "product": {
+      "attribute_set_id": 4,
+      "type_id": "simple",
+      "sku": "B201-SKU166a1",
+      "name": "B201166a1",
+      "price": 25,
+      "status": 1,
+      "extension_attributes":
+      {
+        "stock_item":
+        {
+          "qty": 99, "is_in_stock": true
+        }
+      },
+      "custom_attributes": {
+        "category_ids": 25,
+        "description": "Heavy Duty Brake Cables",
+        "short_description": "SHORTI",
+        "meta_description": "Some describing text",
+        "image" : "https://images.obi.pl/product/PL/1500x1500/158526_1.jpg",
+        "small_image": "https://images.obi.pl/product/PL/1500x1500/158526_1.jpg",
+        "thumbnail": "https://images.obi.pl/product/PL/1500x1500/158526_1.jpg",
+        "swatch_image": "https://images.obi.pl/product/PL/1500x1500/158526_1.jpg",
+        "additional_images": "https://images.obi.pl/product/PL/1500x1500/158526_1.jpg"
+      }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------
+localhost/store/rest/V1/categories
+(ZWRACA ID KATEGORII)
+{
+    "category": {
+        "name": "Name",
+      	"parent_id": 2,
+        "isActive": true
+    },
+    "saveOptions": true
+}

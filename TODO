@@ -1,0 +1,4 @@
+- W przypadku, gdy kategoria istnieje, pobraæ jej ID
+- Rozwin¹æ metodê getId (wiecej info w metodzie)
+- Póki co, po wgraniu wszystkiego na serwer, trzeba pobraæ CSV i wrzuciæ j¹, by zdjêcia chcia³y siê za³adowaæ!
+- Metoda getCategoryId
